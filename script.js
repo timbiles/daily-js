@@ -1,3 +1,30 @@
+///// Problem 8 /////
+// Write a function that, given a string, returns the number of vowels in that string.
+
+// We will consider that a, e, i, o and u are vowels for the sake of this problem.
+
+const vowelCount = str => {
+    return str.split('').filter(e=> {
+      return e.match(/[aeiou]/gi)
+    }).length
+  }
+
+  console.log('vowel count', vowelCount('I am the one who knocks'))
+
+
+///// Problem 7 /////
+
+// Write a function called songDecoder that removes the terrible dubstep sounds from a song, to reveal the original, pure, un-dubstepped beauty.
+
+// The input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters
+
+const songDecoder = str => {
+    return str.split('WUB').join(' ').trim()
+    }
+    
+console.log('Dubstep>>>', songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"))
+
+
 ///// Problem 6 /////
 
 // Given an array, return the reversed version of the array (a different kind of reverse though), you reverse portions of the array, you'll be given a length argument which represents the length of each portion you are to reverse.
